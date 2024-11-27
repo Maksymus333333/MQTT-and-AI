@@ -1,0 +1,30 @@
+version: '3'
+services:
+  influxdb:
+    image: influxdb:2.0
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb-storage:/var/lib/influxdb2
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=adminpassword
+      - DOCKER_INFLUXDB_INIT_ORG=myorg
+      - DOCKER_INFLUXDB_INIT_BUCKET=temperature_data
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=your-super-secret-token
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - influxdb
+    volumes:
+      - grafana-storage:/var/lib/grafana
+
+volumes:
+  influxdb-storage:
+  grafana-storage:
