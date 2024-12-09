@@ -30,6 +30,10 @@ Key Features:
 - Reads the temperature every 10 seconds.
 - Displays the temperature in real-time on the LCD.
 
+![image](https://github.com/user-attachments/assets/30f4d7e5-1e6e-4f6b-b4b0-0e11011c1e31)
+
+
+
 
 
 ## 2) Subscriber - Sending Temperature via MQTT to InfluxDB and Grafana
@@ -61,6 +65,9 @@ Key Features:
 - Stores data in InfluxDB.
 - Displays temperature trends in Grafana.
 
+![image](https://github.com/user-attachments/assets/4bdb120f-4683-4e4b-9007-88e268a9800f)
+
+
 ## 3) Speech-to-Text
 
 Description
@@ -80,6 +87,8 @@ Key Features:
 - Recognizes Polish speech in real-time.
 - Sends transcribed text via MQTT.
 - Displays text on the LCD screen.
+
+![image](https://github.com/user-attachments/assets/94558520-aef6-4037-ae4d-85f6b3be280b)
 
 ## 4) Video-to-Text
 
@@ -101,6 +110,9 @@ Key Features:
 - Detects objects in real-time video streams.
 - Sends detected object names via MQTT.
 - Displays text on the LCD screen.
+
+![image](https://github.com/user-attachments/assets/b7de684f-1c37-4da6-bad1-987fa20e7d6b)
+
 
 ## General Instructions:
 1. Install Docker:
